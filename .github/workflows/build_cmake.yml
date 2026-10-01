@@ -1,6 +1,7 @@
 name: CMake Build Matrix
 
 on:
+  workflow_dispatch:
   push:
     paths-ignore:
       - 'dist/**'
