@@ -1,8 +1,10 @@
 // Copyright (C) 2026 The Qt Company Ltd.
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 
+#include "devices/flutterdevices.h"
 #include "languageserver/dartlanguageserver.h"
 #include "project/dartproject.h"
+#include "wizard/fluttercreategenerator.h"
 
 #include <extensionsystem/iplugin.h>
 
@@ -24,6 +26,8 @@ void DartPlugin::initialize()
 {
     setupDartProject();
     setupDartLanguageServer(this);
+    setupFlutterCreateGenerator();
+    setupFlutterDevices();
 }
 
 } // namespace Dart::Internal

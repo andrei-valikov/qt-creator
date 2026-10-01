@@ -17,7 +17,7 @@
                   "Alternatively, this plugin may be used under the terms of the GNU General Public License version 3 as published by the Free Software Foundation with exceptions as appearing in the file LICENSE.GPL3-EXCEPT included in the packaging of this plugin. Please review the following information to ensure the GNU General Public License requirements will be met: https://www.gnu.org/licenses/gpl-3.0.html."
     ],
     "Description" : "Supports Dart and Flutter projects",
-    "LongDescription" : "Opens `pubspec.yaml` files as projects with ready-made Dart or Flutter build and run configurations, and automatically sets up the Dart language server from a Flutter or Dart SDK that it finds.",
+    "LongDescription" : "Opens `pubspec.yaml` files as projects with ready-made Dart or Flutter build and run configurations, adds a wizard for new Flutter projects and a status bar selector for the Flutter device to run on, and automatically sets up the Dart language server from a Flutter or Dart SDK that it finds.",
     "Url" : "https://www.qt.io",
     "core" : {
         "ProjectFileMimeTypes" : [ "text/x-dart-pubspec" ]

@@ -67,9 +67,11 @@ QJsonObject flutterProjectJson(const FilePath &projectDir)
         builds.append(buildConfiguration(QString("Release (%1)").arg(platform),
                                          {pubGet, step(flutter, {"build", platform})}));
     }
+    const QString device = "%{Flutter:DeviceId}";
     const QJsonArray targets
-        = {runTarget("flutter run", step(flutter, {"run"}), true),
-           runTarget("flutter run --release", step(flutter, {"run", "--release"}), true),
+        = {runTarget("flutter run", step(flutter, {"run", "-d", device}), true),
+           runTarget("flutter run --release",
+                     step(flutter, {"run", "--release", "-d", device}), true),
            runTarget("flutter test", step(flutter, {"test"}), false)};
     return projectJson(builds, targets,
                        {"build", ".dart_tool", ".idea", "*.iml", ".flutter-plugins",

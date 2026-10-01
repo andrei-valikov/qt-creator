@@ -5,11 +5,22 @@ add_qtc_plugin(Dart
     common/dartsdk.cpp
     common/dartsdk.h
     common/darttr.h
+    daemon/flutterdaemon.cpp
+    daemon/flutterdaemon.h
+    daemon/flutterdevice.h
     dartplugin.cpp
+    devices/flutterdevices.cpp
+    devices/flutterdevices.h
+    devices/flutterdeviceselector.cpp
+    devices/flutterdeviceselector.h
     languageserver/dartlanguageserver.cpp
     languageserver/dartlanguageserver.h
     project/dartproject.cpp
     project/dartproject.h
     project/dartprojectdefaults.cpp
     project/dartprojectdefaults.h
+    wizard/fluttercreatecommand.cpp
+    wizard/fluttercreatecommand.h
+    wizard/fluttercreategenerator.cpp
+    wizard/fluttercreategenerator.h
 )

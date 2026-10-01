@@ -16,7 +16,7 @@ using namespace Utils;
 
 namespace Dart::Internal {
 
-static bool isFlutterPackage(const FilePath &pubspec)
+bool isFlutterPackage(const FilePath &pubspec)
 {
     static const QRegularExpression flutterSdk(R"(^\s+sdk:\s*flutter\b)",
                                                QRegularExpression::MultilineOption);

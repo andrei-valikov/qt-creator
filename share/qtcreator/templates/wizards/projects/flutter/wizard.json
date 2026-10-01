@@ -1,0 +1,104 @@
+{
+    "version": 1,
+    "id": "Z.FlutterApplication",
+    "category": "I.Projects",
+    "trDescription": "Creates a Flutter application, package, plugin or module with \"flutter create\".",
+    "trDisplayName": "Flutter Application",
+    "trDisplayCategory": "Non-Qt Project",
+    "icon": "../../global/guiapplication.png",
+    "iconKind": "Themed",
+    "enabled": "%{JS: isPluginRunning('dart')}",
+
+    "options":
+    [
+        { "key": "ProjectFile", "value": "%{ProjectDirectory}/pubspec.yaml" },
+        { "key": "Platforms", "value": "%{PlatformAndroid},%{PlatformIos},%{PlatformLinux},%{PlatformMacos},%{PlatformWindows},%{PlatformWeb}" }
+    ],
+
+    "pages":
+    [
+        {
+            "trDisplayName": "Project Location",
+            "trShortTitle": "Location",
+            "typeId": "Project",
+            "data":
+            {
+                "projectNameValidator": "^[a-z][a-z0-9_]*$",
+                "trProjectNameValidatorUserMessage": "Project names must start with a lowercase letter and contain only lowercase letters, digits, and underscores."
+            }
+        },
+        {
+            "trDisplayName": "Define Project Details",
+            "trShortTitle": "Details",
+            "typeId": "Fields",
+            "data":
+            [
+                {
+                    "name": "Template",
+                    "trDisplayName": "Template:",
+                    "type": "ComboBox",
+                    "persistenceKey": "Flutter.Template",
+                    "data":
+                    {
+                        "index": 0,
+                        "items":
+                        [
+                            { "trKey": "Application", "value": "app" },
+                            { "trKey": "Empty Application", "value": "empty" },
+                            { "trKey": "Skeleton Application", "value": "skeleton" },
+                            { "trKey": "Package", "value": "package" },
+                            { "trKey": "Plugin", "value": "plugin" },
+                            { "trKey": "Module", "value": "module" }
+                        ]
+                    }
+                },
+                {
+                    "name": "Organization",
+                    "trDisplayName": "Organization:",
+                    "type": "LineEdit",
+                    "mandatory": true,
+                    "persistenceKey": "Flutter.Organization",
+                    "data": { "trText": "com.example", "validator": "^[A-Za-z][A-Za-z0-9_]*(\\.[A-Za-z][A-Za-z0-9_]*)+$" }
+                },
+                {
+                    "name": "Description",
+                    "trDisplayName": "Description:",
+                    "type": "LineEdit",
+                    "data": { "trText": "A new Flutter project." }
+                },
+                {
+                    "name": "PlatformsLabel",
+                    "type": "Label",
+                    "span": true,
+                    "data": { "trText": "Platforms (applications and plugins only):" }
+                },
+                { "name": "PlatformAndroid", "trDisplayName": "Android", "type": "CheckBox", "persistenceKey": "Flutter.Platform.Android", "data": { "checkedValue": "android", "uncheckedValue": "", "checked": true } },
+                { "name": "PlatformIos", "trDisplayName": "iOS", "type": "CheckBox", "persistenceKey": "Flutter.Platform.iOS", "data": { "checkedValue": "ios", "uncheckedValue": "", "checked": true } },
+                { "name": "PlatformLinux", "trDisplayName": "Linux", "type": "CheckBox", "persistenceKey": "Flutter.Platform.Linux", "data": { "checkedValue": "linux", "uncheckedValue": "", "checked": true } },
+                { "name": "PlatformMacos", "trDisplayName": "macOS", "type": "CheckBox", "persistenceKey": "Flutter.Platform.macOS", "data": { "checkedValue": "macos", "uncheckedValue": "", "checked": true } },
+                { "name": "PlatformWindows", "trDisplayName": "Windows", "type": "CheckBox", "persistenceKey": "Flutter.Platform.Windows", "data": { "checkedValue": "windows", "uncheckedValue": "", "checked": true } },
+                { "name": "PlatformWeb", "trDisplayName": "Web", "type": "CheckBox", "persistenceKey": "Flutter.Platform.Web", "data": { "checkedValue": "web", "uncheckedValue": "", "checked": true } }
+            ]
+        },
+        {
+            "trDisplayName": "Project Management",
+            "trShortTitle": "Summary",
+            "typeId": "Summary"
+        }
+    ],
+
+    "generators":
+    [
+        {
+            "typeId": "FlutterCreate",
+            "data":
+            {
+                "projectName": "%{ProjectName}",
+                "organization": "%{Organization}",
+                "description": "%{Description}",
+                "template": "%{Template}",
+                "platforms": "%{Platforms}"
+            }
+        }
+    ]
+}

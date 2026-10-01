@@ -3,11 +3,8 @@
 
 #pragma once
 
-namespace Utils { class FilePath; }
-
 namespace Dart::Internal {
 
-bool isFlutterPackage(const Utils::FilePath &pubspec);
-void setupDartProject();
+void setupFlutterDevices();
 
 } // namespace Dart::Internal
