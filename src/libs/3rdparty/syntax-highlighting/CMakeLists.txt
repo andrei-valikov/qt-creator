@@ -53,6 +53,7 @@ add_qtc_library(KSyntaxHighlighting
       ksyntaxhighlighting-bash
       ksyntaxhighlighting-cmake
       ksyntaxhighlighting-css
+      ksyntaxhighlighting-dart
       ksyntaxhighlighting-doxygen
       ksyntaxhighlighting-dtd
       ksyntaxhighlighting-html

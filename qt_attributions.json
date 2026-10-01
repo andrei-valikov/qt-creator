@@ -83,6 +83,19 @@
         "Copyright": "Author: Wilbert Berendsen (wilbert@kde.nl). Changes: Version 7 and 8 by Jonathan Poelen, Version 2.13 and 4 by Guo Yunhe (guoyunhebrave@gmail.com), Version 2.08 by Joseph Wenninger, Version 2.06 by Mte90, Version 2.03 by Milian Wolff."
     },
     {
+        "Id": "ksyntaxhighlighting-dart",
+        "Name": "KSyntaxHighlighting: dart.xml",
+        "QDocModule": "qtcreator",
+        "QtParts": ["tools"],
+        "QtUsage": "Used for the generic highlighter for text files.",
+        "Path": "@SOURCE_DIR@/src/libs/3rdparty/syntax-highlighting/data/syntax",
+        "Description": "Syntax highlighting definition dart.xml",
+        "Homepage": "https://invent.kde.org/frameworks/syntax-highlighting/-/tree/master/data/syntax",
+        "License": "MIT License",
+        "LicenseFile": "@SOURCE_DIR@/src/libs/3rdparty/syntax-highlighting/COPYING",
+        "Copyright": "Author: Waqar Ahmed (waqar.17a@gmail.com)."
+    },
+    {
         "Id": "ksyntaxhighlighting-doxygen",
         "Name": "KSyntaxHighlighting: doxygen.xml",
         "QDocModule": "qtcreator",
