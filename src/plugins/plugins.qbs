@@ -35,6 +35,7 @@ Project {
         "cppcheck/cppcheck.qbs",
         "cppeditor/cppeditor.qbs",
         "cvs/cvs.qbs",
+        "dart/dart.qbs",
         "debugger/debugger.qbs",
         "debugger/ptracepreload.qbs",
         "designer/designer.qbs",
